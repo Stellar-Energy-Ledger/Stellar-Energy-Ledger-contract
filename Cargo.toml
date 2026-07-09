@@ -1,0 +1,12 @@
+[workspace]
+members = ["contracts/energy-token", "contracts/marketplace"]
+
+[profile.release]
+opt-level = "z"
+strip = true
+debug = false
+lto = true
+
+[profile.release-with-logs]
+inherits = "release"
+debug = true
